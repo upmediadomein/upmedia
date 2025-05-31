@@ -1,13 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Upmedia</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+
+<body class="bg-blue-50">
+
     <h1 class="text-center text-3xl mt-6">Hallo meneer Daan</h1>
-    <img class="mx-auto" width="500" height="500" src="https://p16-pu-sign-no.tiktokcdn-eu.com/tos-no1a-avt-0068c001-no/357fb83ef19d940ef2c2c7f84b6383ea~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=10399&refresh_token=87485c1e&x-expires=1748854800&x-signature=cpt0ihEwcWVkXznnrrv8EqieiXA%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast2b">
+
+    <img class="mx-auto mt-4 rounded-xl" width="300"
+        src="https://p16-pu-sign-no.tiktokcdn-eu.com/tos-no1a-avt-0068c001-no/357fb83ef19d940ef2c2c7f84b6383ea~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=10399&refresh_token=87485c1e&x-expires=1748854800&x-signature=cpt0ihEwcWVkXznnrrv8EqieiXA%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast2b"
+        alt="Profielfoto">
+
+    <h2 class="text-center text-4xl mt-6">Als je dit prachtige domein wil kopen neem contact op</h2>
+    <!-- Contact knop -->
+    <div class="text-center mt-6">
+        <button onclick="document.getElementById('popup').classList.remove('hidden')"
+            class="bg-blue-400 hover:bg-blue-500 text-white font-semibold py-2 px-6 rounded-xl transition">
+            Contact
+        </button>
+    </div>
+
+    <!-- Popup -->
+    <div id="popup" class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center hidden z-50">
+        <div class="bg-white p-6 rounded-2xl shadow-lg w-full max-w-md relative">
+            <!-- Sluit knop -->
+            <button onclick="document.getElementById('popup').classList.add('hidden')"
+                class="absolute top-2 right-3 text-gray-500 hover:text-red-500 text-xl">&times;</button>
+
+            <h2 class="text-2xl font-bold text-blue-600 text-center mb-4">Neem contact op</h2>
+
+            <form action="https://formspree.io/f/mqabzgjd" method="POST" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Naam</label>
+                    <input type="text" name="naam"
+                        class="mt-1 w-full p-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-300"
+                        required>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">E-mail</label>
+                    <input type="email" name="email"
+                        class="mt-1 w-full p-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-300"
+                        required>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Bericht / bod</label>
+                    <textarea name="bericht" rows="4"
+                        class="mt-1 w-full p-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-300"
+                        required></textarea>
+                </div>
+
+                <button type="submit"
+                    class="w-full bg-blue-400 hover:bg-blue-500 text-white font-semibold py-2 rounded-xl transition">
+                    Verstuur
+                </button>
+            </form>
+        </div>
+    </div>
+
 </body>
+
 </html>
